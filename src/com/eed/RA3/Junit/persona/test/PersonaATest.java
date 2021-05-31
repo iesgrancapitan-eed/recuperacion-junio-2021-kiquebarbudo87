@@ -26,6 +26,9 @@ class PersonaATest {
 	  void tearDown() throws Exception {}
 
 	  @Test
+	  /*
+	   * Comprueba si es mayor o menor de edad.
+	   */
 	 final void testPersona() {
 	    try {
 	      //Mayores de edad
@@ -41,6 +44,9 @@ class PersonaATest {
 	 
 	  }
 	  @Test
+	  /*
+	   * Comprueba que la edad de la persona sea positiva, y por tanto, real.
+	   */
 	  final void testPersonaInvalido() {
 	    
 	    assertThrows(EdadNoValidaException.class,()->{ 
@@ -54,6 +60,10 @@ class PersonaATest {
 	 
 	  }
 	  @Test
+	  /*
+	   * Comprueba los valores límite de la edad.
+	   * 
+	   */
 	  final void testIsMayorDeEdad() {
 	    PersonaA persona;
 	    try {
