@@ -10,12 +10,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.eed.RA3.Junit.exceptions.EdadNoValidaException;
-import com.eed.RA3.Junit.persona.PersonaA;
+import com.eed.RA3.Junit.persona.Persona;
 
-class PersonaATest {
+class PersonaTest {
 	
-	private PersonaA Enrique;
-	private PersonaA Ana;
+	private Persona Enrique;
+	private Persona Ana;
 
 	@BeforeAll
 	  static void setUpBeforeClass() throws Exception {}
@@ -25,8 +25,8 @@ class PersonaATest {
 
 	  @BeforeEach
 	  void setUp() throws Exception {
-		  Enrique = new PersonaA(33);
-		  Ana = new PersonaA(17);
+		  Enrique = new Persona(33);
+		  Ana = new Persona(17);
 	  }
 
 	  @AfterEach
@@ -39,11 +39,11 @@ class PersonaATest {
 	 final void testPersonaA() {
 	    try {
 	      //Mayores de edad
-	      new PersonaA(18);
-	      new PersonaA(100);
+	      new Persona(18);
+	      new Persona(100);
 	      //Menores de edad
-	      new PersonaA(0);
-	      new PersonaA(17);
+	      new Persona(0);
+	      new Persona(17);
 	    } catch (EdadNoValidaException e) {
 	      fail("Aqui no debe llegar");
 	    }
@@ -57,11 +57,11 @@ class PersonaATest {
 	  final void testPersonaInvalido() {
 	    
 	    assertThrows(EdadNoValidaException.class,()->{ 
-	      new PersonaA(-1);
+	      new Persona(-1);
 	    });
 	    
 	    assertThrows(EdadNoValidaException.class,()->{
-	      new PersonaA(-100);
+	      new Persona(-100);
 	    });
 	    
 	 
@@ -72,18 +72,18 @@ class PersonaATest {
 	   * 
 	   */
 	  final void testIsMayorDeEdad() {
-	    PersonaA persona;
+	    Persona persona;
 	    try {
-	      persona = new PersonaA(18);
+	      persona = new Persona(18);
 	      assertTrue(persona.isMayorDeEdad());
 	      
-	      persona = new PersonaA(100);
+	      persona = new Persona(100);
 	      assertTrue(persona.isMayorDeEdad());
 	      
-	      persona = new PersonaA(0);
+	      persona = new Persona(0);
 	      assertFalse(persona.isMayorDeEdad());
 	      
-	      persona = new PersonaA(17);
+	      persona = new Persona(17);
 	      assertFalse(persona.isMayorDeEdad());
 	      
 	      
@@ -96,8 +96,8 @@ class PersonaATest {
 	  }
 	  @Test
 	  void compareTo() {
-		  assertEquals(PersonaA.IGUAL_EDAD,Enrique.compareTo(Ana));
-		  assertEquals(PersonaA.IGUAL_EDAD,Ana.compareTo(Enrique));
+		  assertEquals(Persona.IGUAL_EDAD,Enrique.compareTo(Ana));
+		  assertEquals(Persona.IGUAL_EDAD,Ana.compareTo(Enrique));
 		  
 	  }
 
