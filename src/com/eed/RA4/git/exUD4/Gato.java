@@ -18,6 +18,10 @@ public class Gato  {
 	public int getEdad() {
 		return this.edad;
 	}
+	
+	public String maullar() {
+		return "Miauuuuuuuuuuuuu";
+	}
 
 	public String getNombre() {
 		return nombre;
