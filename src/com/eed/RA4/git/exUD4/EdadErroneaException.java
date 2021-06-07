@@ -1,6 +1,6 @@
 package com.eed.RA4.git.exUD4;
 	/**
-	 * 
+	 * Se lanza si la edad es errónea
 	 * @author ebarbudo 
 	 *
 	 */
