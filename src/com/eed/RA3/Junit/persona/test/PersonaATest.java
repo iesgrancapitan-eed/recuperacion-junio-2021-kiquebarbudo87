@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import com.eed.RA3.Junit.exceptions.EdadNoValidaException;
 import com.eed.RA3.Junit.persona.Persona;
 
-class PersonaTest {
+class PersonaATest {
 	
 	private Persona enrique;
 	private Persona ana;
@@ -96,10 +96,21 @@ class PersonaTest {
 	  }
 	  @Test
 	  void compareTo() {
+<<<<<<< HEAD
 		  assertEquals(Persona.IGUAL_EDAD,enrique.compareTo(ana));
 		  assertEquals(Persona.IGUAL_EDAD,ana.compareTo(enrique));
 		  enrique.compareTo(null);
 		  
+=======
+		  assertEquals(Persona.IGUAL_EDAD,Enrique.compareTo(Ana));
+		  assertEquals(Persona.IGUAL_EDAD,Ana.compareTo(Enrique));
+		  	Assertions.assertThrows(NullPointerException.class,()->{
+		  		Enrique.compareTo(null);
+		  	});
+		  	Assertions.assertThrows(ClassCastException.class,()->{
+		  		Enrique.compareTo((Persona) new Object());
+		  	});
+>>>>>>> junit
 	  }
 
 }
