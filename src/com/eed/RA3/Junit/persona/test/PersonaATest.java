@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,9 @@ import com.eed.RA3.Junit.exceptions.EdadNoValidaException;
 import com.eed.RA3.Junit.persona.PersonaA;
 
 class PersonaATest {
+	
+	private PersonaA Enrique;
+	private PersonaA Ana;
 
 	@BeforeAll
 	  static void setUpBeforeClass() throws Exception {}
@@ -20,7 +24,10 @@ class PersonaATest {
 	  static void tearDownAfterClass() throws Exception {}
 
 	  @BeforeEach
-	  void setUp() throws Exception {}
+	  void setUp() throws Exception {
+		  Enrique = new PersonaA(33);
+		  Ana = new PersonaA(17);
+	  }
 
 	  @AfterEach
 	  void tearDown() throws Exception {}
@@ -29,7 +36,7 @@ class PersonaATest {
 	  /*
 	   * Comprueba si es mayor o menor de edad.
 	   */
-	 final void testPersona() {
+	 final void testPersonaA() {
 	    try {
 	      //Mayores de edad
 	      new PersonaA(18);
@@ -79,11 +86,19 @@ class PersonaATest {
 	      persona = new PersonaA(17);
 	      assertFalse(persona.isMayorDeEdad());
 	      
+	      
+	      
 	    } catch (EdadNoValidaException e) {
 	      fail("Aqui no debe llegar");
 	    }
 	    
 	    
+	  }
+	  @Test
+	  void compareTo() {
+		  assertEquals(PersonaA.IGUAL_EDAD,Enrique.compareTo(Ana));
+		  assertEquals(PersonaA.IGUAL_EDAD,Ana.compareTo(Enrique));
+		  
 	  }
 
 }
