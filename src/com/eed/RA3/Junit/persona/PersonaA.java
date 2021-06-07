@@ -3,15 +3,14 @@ package com.eed.RA3.Junit.persona;
 import com.eed.RA3.Junit.exceptions.EdadNoValidaException;
 
 public class PersonaA implements Comparable<PersonaA>{
-<<<<<<< HEAD
-=======
+
 	
 	public final static int MAYOR_EDAD=1;
 	public final static int IGUAL_EDAD=0;
 	public final static int MENOR_EDAD=-1;
 	
 	
->>>>>>> junit
+
   private int edad;
   
   public PersonaA(int edad) throws EdadNoValidaException {
@@ -24,14 +23,13 @@ public class PersonaA implements Comparable<PersonaA>{
   public boolean isMayorDeEdad () {
     return edad >=18;
   }
-<<<<<<< HEAD
+
 @Override
 public int compareTo(PersonaA o) {
 	// TODO Auto-generated method stub
 	return 0;
 }
-=======
-  
+
   public int getEdad() {
 	  return edad;
   }
