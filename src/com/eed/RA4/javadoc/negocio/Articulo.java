@@ -3,12 +3,12 @@ package com.eed.RA4.javadoc.negocio;
 import com.eed.RA4.javadoc.excepciones.PrecioNegativoException;
 import com.eed.RA4.javadoc.excepciones.UnidadNegativaException;
 
-/**Clase ArtÃ­culo que representa a los artÃ­culos del almacÃ©n.
- * Su estado serÃ¡: cÃ³digo, descripciÃ³n, precio de compra, precio de venta, nÃºmero de unidades (nunca negativas),
- * stock de seguridad y stock mÃ¡ximo.
- * Como comportamiento: Consideramos que el cÃ³digo va a generarse de forma automÃ¡tica en el constructor, asÃ­ no 
- * puede haber dos artÃ­culos con el mismo cÃ³digo. Esto implica que no puede modificarse el cÃ³digo de un artÃ­culo,
- * sÃ­ el resto de las propiedades. Podremos mostrar el artÃ­culo, por lo que necesito una representaciÃ³n del artÃ­culo 
+/**Clase Artículo que representa a los artículos del almacén.
+ * Su estado será: código, descripción, precio de compra, precio de venta, número de unidades (nunca negativas),
+ * stock de seguridad y stock máximo.
+ * Como comportamiento: Consideramos que el código va a generarse de forma automática en el constructor, así no 
+ * puede haber dos artículos con el mismo código. Esto implica que no puede modificarse el código de un artículo,
+ * sí el resto de las propiedades. Podremos mostrar el artículo, por lo que necesito una representación del artículo 
  * en forma de cadena (toString).
  * 
  *@author ebarbudo
@@ -18,23 +18,23 @@ import com.eed.RA4.javadoc.excepciones.UnidadNegativaException;
 
 public class Articulo {
   /**
-   * CÃ³digo del artÃ­culo
+   * Código del artículo
    */
   private int codigo;
   /**
-   * DescripciÃ³n del artÃ­culo
+   * Descripción del artículo
    */
   private String descripcion;
   /**
-   * Precio al que se compra el artÃ­culo
+   * Precio al que se compra el artículo
    */
   private double precioCompra;
   /**
-   * Precio al que se vende el artÃ­culo
+   * Precio al que se vende el artículo
    */
   private double precioVenta;
   /**
-   * NÃºmero total de unidades de un articulo
+   * Número total de unidades de un artículo
    */
   private int numUnidades;
   /**
@@ -45,26 +45,26 @@ public class Articulo {
   
   // Constructor de la clase
   /**
-   * Crea un nuevo artÃ­culo con los parÃ¡metros indicados
+   * Crea un nuevo artículo con los parámetros indicados
    * 
-   * @param descripciÃ³n
-   *        DescripciÃ³n de un artÃ­culo.
+   * @param descripción
+   *        Descripción de un artículo.
    *        
    * @param precioCompra
-   *        Precio al que compramos un artÃ­culo.
+   *        Precio al que compramos un artículo.
    *        
    * @param precioVenta
-   *        Precio al que vendemos un artÃ­culo.
+   *        Precio al que vendemos un artículo.
    *        
    * @param numUnidades
-   *        Cantidad totales de unidades de un artÃ­culo.
+   *        Cantidad totales de unidades de un artículo.
    * 
    * @throws UnidadNegativaException
-   *         Si no se ha podido aÃ±adir el artÃ­culo al almacÃ©n
+   *         Si no se ha podido añadir el artículo al almacén
    *         porque la cantidad a introducir es negativa.
    * 
    * @throws PrecioNegativoException
-   *         Si no se ha podido aÃ±adir el artÃ­culo al almacÃ©n
+   *         Si no se ha podido añadir el artículo al almacén
    *         porque el precio es 0 o menor.
    *         
    * 
@@ -81,11 +81,11 @@ public class Articulo {
 
   }
   
-  // Constructor para identificacion por cÃ³digo de un articulo
+  // Constructor para identificacion por código de un articulo
   /**
    * 
    * @param codigo
-   *        CÃ³digo a buscar
+   *        Código a buscar
    */
   
   public Articulo(int codigo) {
@@ -105,7 +105,7 @@ public class Articulo {
    * Asigna el numero de unidades de un articulo
    * 
    * @param numUnidades
-   *        numero de unidades a asignar
+   *        número de unidades a asignar
    * 
    * @throws UnidadNegativaExcecption
    *         Si la unidad es 0 o menor
@@ -117,10 +117,10 @@ public class Articulo {
   }
 
   /**
-   * Asigna la descripciÃ³n del artÃ­culo
+   * Asigna la descripción del artículo
    * 
    * @param descripcion
-   *        descripciÃ³n a asignar
+   *        descripción a asignar
    *        
    */
   void setDescripcion(String descripcion) {
@@ -128,7 +128,7 @@ public class Articulo {
   }
 
   /**
-   * Asigna el precio de compra de un artÃ­culo
+   * Asigna el precio de compra de un artículo
    * 
    * @param precioCompra 
    *        precio de compra a asignar
@@ -158,7 +158,7 @@ public class Articulo {
   
    
    /**
-    * MÃ©todo para incrementar el codigo cuando creamos un articulo nuevo
+    * Método para incrementar el codigo cuando creamos un articulo nuevo
     * @return siguientecodigo
     */
    
@@ -171,11 +171,11 @@ public class Articulo {
    */
   @Override
   public String toString() {
-    return "Cï¿½DIGO DEL ARTï¿½CULO: " + codigo + "\n"+
-        "DESCRIPCIï¿½N: " + descripcion + "\n"+
+    return "CÓDIGO DEL ARTÍCULO: " + codigo + "\n"+
+        "DESCRIPCIÓN: " + descripcion + "\n"+
         "PRECIO DE COMPRA: " + precioCompra + "\n"+
         "PRECIO DE VENTA: " + precioVenta + "\n"+
-        "Nï¿½MERO DE UNIDADES: " + numUnidades + "\n";
+        "NÚMERO DE UNIDADES: " + numUnidades + "\n";
   }
   /**
    * 
@@ -209,34 +209,34 @@ public class Articulo {
   
   
   /**
-   * incrementa existencias de un articulo (delegado de la clase almacÃ©n)
+   * Método para incrementar existencias de un articulo (delegado de la clase almacén)
    * 
    * @param cantidad
    *        cantidad a incrementar
    *        
    * @throws UnidadNegativaException
-   *         Si el nÃºmero de unidades es 0 o menor
+   *         Si el número de unidades es 0 o menor
    */
   
   void addStock (int cantidad) throws UnidadNegativaException {
     if (cantidad < 0)
-      throw new UnidadNegativaException ("El nï¿½mero de articulos a introducir no puede ser negativo");
+      throw new UnidadNegativaException ("El número de articulos a introducir no puede ser negativo");
     setNumUnidades(getNumUnidades() + cantidad);
   }
   
   /**
-   * decrementa existencias de un articulo (delegado de la clase almacÃ©n)
+   * Método para decrementar existencias de un articulo (delegado de la clase almacén)
    * 
    * @param cantidad
    *        cantidad a decrementar
    *        
    * @throws UnidadNegativaException
-   *         Si el nÃºmero de unidades es 0 o menor
+   *         Si el número de unidades es 0 o menor
    */
   
   void deleteStock (int cantidad) throws UnidadNegativaException {
     if (cantidad < 0)
-      throw new UnidadNegativaException ("El nï¿½mero de articulos a disminuir no puede ser negativo");
+      throw new UnidadNegativaException ("El número de articulos a disminuir no puede ser negativo");
     setNumUnidades(getNumUnidades() - cantidad);
   }
   
