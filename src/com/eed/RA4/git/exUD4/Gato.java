@@ -1,7 +1,6 @@
 package com.eed.RA4.git.exUD4;
 
-public class Gato  {
-	private static final String MIAUUUUUUUUUUUUU = "Miauuuuuuuuuuuuu";
+public class Gato extends Mamifero  {
 	private int edad;
 	private String nombre;
 
@@ -20,10 +19,6 @@ public class Gato  {
 		return this.edad;
 	}
 	
-	public String maullar() {
-		return MIAUUUUUUUUUUUUU;
-	}
-
 	public String getNombre() {
 		return nombre;
 	}
