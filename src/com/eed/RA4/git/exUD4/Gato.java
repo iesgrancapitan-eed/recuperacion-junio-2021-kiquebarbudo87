@@ -1,6 +1,6 @@
 package com.eed.RA4.git.exUD4;
 
-public class Gato extends Mamifero {
+public class Gato  {
 	private int edad;
 	private String nombre;
 
