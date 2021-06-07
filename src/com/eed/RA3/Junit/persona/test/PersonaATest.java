@@ -96,21 +96,21 @@ class PersonaATest {
 	  }
 	  @Test
 	  void compareTo() {
-<<<<<<< HEAD
+
 		  assertEquals(Persona.IGUAL_EDAD,enrique.compareTo(ana));
 		  assertEquals(Persona.IGUAL_EDAD,ana.compareTo(enrique));
 		  enrique.compareTo(null);
 		  
-=======
-		  assertEquals(Persona.IGUAL_EDAD,Enrique.compareTo(Ana));
-		  assertEquals(Persona.IGUAL_EDAD,Ana.compareTo(Enrique));
+
+		  assertEquals(Persona.IGUAL_EDAD,enrique.compareTo(ana));
+		  assertEquals(Persona.IGUAL_EDAD,ana.compareTo(enrique));
 		  	Assertions.assertThrows(NullPointerException.class,()->{
-		  		Enrique.compareTo(null);
+		  		enrique.compareTo(null);
 		  	});
 		  	Assertions.assertThrows(ClassCastException.class,()->{
-		  		Enrique.compareTo((Persona) new Object());
+		  		enrique.compareTo((Persona) new Object());
 		  	});
->>>>>>> junit
+
 	  }
 
 }
