@@ -98,6 +98,7 @@ class PersonaTest {
 	  void compareTo() {
 		  assertEquals(Persona.IGUAL_EDAD,enrique.compareTo(ana));
 		  assertEquals(Persona.IGUAL_EDAD,ana.compareTo(enrique));
+		  enrique.compareTo(null);
 		  
 	  }
 
