@@ -12,10 +12,10 @@ import org.junit.jupiter.api.Test;
 import com.eed.RA3.Junit.exceptions.EdadNoValidaException;
 import com.eed.RA3.Junit.persona.Persona;
 
-class PersonaATest {
+class PersonaTest {
 	
-	private Persona Enrique;
-	private Persona Ana;
+	private Persona enrique;
+	private Persona ana;
 
 	@BeforeAll
 	  static void setUpBeforeClass() throws Exception {}
@@ -25,8 +25,8 @@ class PersonaATest {
 
 	  @BeforeEach
 	  void setUp() throws Exception {
-		  Enrique = new Persona(33);
-		  Ana = new Persona(17);
+		  enrique = new Persona(33);
+		  ana = new Persona(17);
 	  }
 
 	  @AfterEach
@@ -36,7 +36,7 @@ class PersonaATest {
 	  /*
 	   * Comprueba si es mayor o menor de edad.
 	   */
-	 final void testPersonaA() {
+	 final void testPersona() {
 	    try {
 	      //Mayores de edad
 	      new Persona(18);
@@ -96,13 +96,13 @@ class PersonaATest {
 	  }
 	  @Test
 	  void compareTo() {
-		  assertEquals(Persona.IGUAL_EDAD,Enrique.compareTo(Ana));
-		  assertEquals(Persona.IGUAL_EDAD,Ana.compareTo(Enrique));
+		  assertEquals(Persona.IGUAL_EDAD,enrique.compareTo(ana));
+		  assertEquals(Persona.IGUAL_EDAD,ana.compareTo(enrique));
 		  	Assertions.assertThrows(NullPointerException.class,()->{
-		  		Enrique.compareTo(null);
+		  		enrique.compareTo(null);
 		  	});
 		  	Assertions.assertThrows(ClassCastException.class,()->{
-		  		Enrique.compareTo((Persona) new Object());
+		  		enrique.compareTo((Persona) new Object());
 		  	});
 	  }
 
