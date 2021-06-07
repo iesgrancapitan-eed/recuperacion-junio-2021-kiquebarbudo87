@@ -14,8 +14,8 @@ import com.eed.RA3.Junit.persona.Persona;
 
 class PersonaTest {
 	
-	private Persona Enrique;
-	private Persona Ana;
+	private Persona enrique;
+	private Persona ana;
 
 	@BeforeAll
 	  static void setUpBeforeClass() throws Exception {}
@@ -25,8 +25,8 @@ class PersonaTest {
 
 	  @BeforeEach
 	  void setUp() throws Exception {
-		  Enrique = new Persona(33);
-		  Ana = new Persona(17);
+		  enrique = new Persona(33);
+		  ana = new Persona(17);
 	  }
 
 	  @AfterEach
@@ -96,8 +96,8 @@ class PersonaTest {
 	  }
 	  @Test
 	  void compareTo() {
-		  assertEquals(Persona.IGUAL_EDAD,Enrique.compareTo(Ana));
-		  assertEquals(Persona.IGUAL_EDAD,Ana.compareTo(Enrique));
+		  assertEquals(Persona.IGUAL_EDAD,enrique.compareTo(ana));
+		  assertEquals(Persona.IGUAL_EDAD,ana.compareTo(enrique));
 		  
 	  }
 
