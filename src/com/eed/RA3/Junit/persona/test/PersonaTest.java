@@ -96,8 +96,8 @@ class PersonaTest {
 	  }
 	  @Test
 	  void compareTo() {
-		  assertEquals(Persona.IGUAL_EDAD,enrique.compareTo(ana));
-		  assertEquals(Persona.IGUAL_EDAD,ana.compareTo(enrique));
+		  assertEquals(Persona.MAYOR_EDAD,enrique.compareTo(ana));
+		  assertEquals(Persona.MENOR_EDAD,ana.compareTo(enrique));
 		  	Assertions.assertThrows(NullPointerException.class,()->{
 		  		enrique.compareTo(null);
 		  	});
