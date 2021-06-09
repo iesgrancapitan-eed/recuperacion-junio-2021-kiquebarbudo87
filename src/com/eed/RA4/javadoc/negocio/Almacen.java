@@ -24,7 +24,9 @@ import com.eed.RA4.javadoc.excepciones.UnidadNegativaException;
 
 
 public class Almacen {
-	
+	/**
+	 * Crea el almacén con la serie de artículos guardados en un arraylist.	
+	 */
 	  private ArrayList<Articulo> almacen = new ArrayList<Articulo>();
 	  
 	
@@ -136,8 +138,10 @@ public class Almacen {
 	  }
 	  
 	  
-	  //Método toString para listar el almacén
-	  
+	  //
+	  /**
+	   * Muestra el almacén como una cadena. 
+	   */
 	  @Override
 	  public String toString() {
 	    return "Almacen\n" + almacen;
@@ -152,7 +156,9 @@ public class Almacen {
 	    boolean vacio = almacen.isEmpty();
 	    return vacio;
 	  }
-	  
+	  /**
+	   * Muestra los artículos que hay en el almacén
+	   */
 	  public void getAlmacen() {
 	    for (Articulo articulos : almacen) {
 	      System.out.println(articulos);

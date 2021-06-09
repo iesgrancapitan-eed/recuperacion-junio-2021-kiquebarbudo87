@@ -7,6 +7,9 @@ package com.eed.RA4.javadoc.excepciones;
  *
  */
 public class ArticuloNoExisteException extends Exception {
+	/**
+	 * Si el articulo no existe muestra un mensaje
+	 */
 	 public ArticuloNoExisteException(String mensaje) {
 		    super(mensaje);
 		  }
