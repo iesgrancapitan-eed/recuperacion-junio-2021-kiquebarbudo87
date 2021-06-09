@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.eed.RA4.javadoc.excepciones"},{"l":"com.eed.RA4.javadoc.negocio"},{"l":"com.eed.RA4.javadoc.utiles"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.eed.RA4.javadoc.excepciones"}]
