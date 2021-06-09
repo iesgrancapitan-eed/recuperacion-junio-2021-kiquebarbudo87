@@ -10,7 +10,7 @@ package com.eed.RA4.javadoc.utiles;
  */
 public class Menu {
 /**
- * Menú principal de la aplicación
+ * Muestra un Menú principal de la aplicación
  */
 public static void menuPrincipal() {
   System.out.println("======MENÚ GESTIÓN ALMACÉN======");
@@ -23,7 +23,7 @@ public static void menuPrincipal() {
   System.out.println("[7]. SALIR: ");
 } 
 /**
- * Menú para modificar un artículo del almacén
+ * Muestra un Menú para modificar un artículo del almacén
  */
 public static void menuModifica() {
   System.out.println("==========MENÚ MODIFICACIÓN ALMACÉN======");

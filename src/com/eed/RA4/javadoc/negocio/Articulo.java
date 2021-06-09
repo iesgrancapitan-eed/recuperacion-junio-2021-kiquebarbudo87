@@ -83,7 +83,7 @@ public class Articulo {
   
   // Constructor para identificacion por código de un articulo
   /**
-   * 
+   * Crea un código nuevo para cada artículo
    * @param codigo
    *        Código a buscar
    */
@@ -166,8 +166,9 @@ public class Articulo {
      return siguienteCodigo++;
    }
 
-  /* (non-Javadoc)
-   * @see java.lang.Object#toString()
+  /** 
+   * Muestra el resultado del artículo como una cadena.
+   * 
    */
   @Override
   public String toString() {
@@ -178,9 +179,9 @@ public class Articulo {
         "NÚMERO DE UNIDADES: " + numUnidades + "\n";
   }
   /**
-   * 
+   * Almacena la instancia de la clase.
    */
-
+  
   @Override
   public int hashCode() {
     final int prime = 31;
@@ -190,7 +191,7 @@ public class Articulo {
   }
 
   /**
-   * 
+   * Compara dos artículos.
    */
 
   @Override
