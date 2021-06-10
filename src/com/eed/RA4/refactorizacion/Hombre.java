@@ -5,6 +5,7 @@ public class Hombre {
 	private String nombre;
 	
 	
+	
 	public Hombre(String nombre, int edad) throws EdadErroneaException {
 		setAge(edad);
 		this.nombre = nombre;
@@ -26,6 +27,10 @@ public class Hombre {
 	}
 	public String getNombre() {
 		return nombre;
+	}
+	
+	public String decirAdios() {
+		return "Nos vemos amig@!";
 	}
 
 }
