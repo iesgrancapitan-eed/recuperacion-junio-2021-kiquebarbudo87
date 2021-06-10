@@ -1,6 +1,7 @@
 package com.eed.RA4.refactorizacion;
 
 public class Hombre {
+	public static final String SALUDA = "Hola, ¿que tal estás? Gracias por darme voz";
 	private int edad;
 	private String nombre;
 	
@@ -23,7 +24,7 @@ public class Hombre {
 	}
 	
 	public String decirHola() {
-		return "Hola, ¿que tal estás? Gracias por darme voz";
+		return SALUDA;
 	}
 	public String getNombre() {
 		return nombre;
