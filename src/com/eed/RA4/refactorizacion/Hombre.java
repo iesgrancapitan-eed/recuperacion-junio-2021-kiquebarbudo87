@@ -1,8 +1,8 @@
 package com.eed.RA4.refactorizacion;
 
-public class Hombre {
+public class Hombre extends Persona {
 	public static final String SALUDA = "Hola, ¿que tal estás? Gracias por darme voz";
-	private int edad;
+	int edad;
 	private String nombre;
 	
 	
@@ -19,19 +19,8 @@ public class Hombre {
 		this.edad = edad;
 	}
 	
-	public int getEdad() {
-		return this.edad;
-	}
-	
-	public String decirHola() {
-		return SALUDA;
-	}
 	public String getNombre() {
 		return nombre;
-	}
-	
-	public String decirAdios() {
-		return "Nos vemos amig@!";
 	}
 
 }
