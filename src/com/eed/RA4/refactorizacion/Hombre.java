@@ -22,7 +22,7 @@ public class Hombre {
 		return this.edad;
 	}
 	
-	public String hablar() {
+	public String decirHola() {
 		return "Hola, ¿que tal estás? Gracias por darme voz";
 	}
 	public String getNombre() {
